@@ -1,12 +1,13 @@
-from settings import setting
+from settings.config import TG_BOT_API_KEY
 import asyncio
 from aiogram import Bot, Dispatcher
 from aiogram.filters import CommandStart
 from aiogram.types import Message
 
-bot = Bot(token=TG_BOT_API_KEY)
+async def main():
+    bot = Bot(token=TG_BOT_API_KEY)
+    dispatcher = Dispatcher()
+    await dispatcher.start_polling(bot)
 
-dispatcher = Dispatcher()
-
-
-
+if __name__ == "__main__":
+    asyncio.run(main())
