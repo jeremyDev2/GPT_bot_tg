@@ -5,5 +5,6 @@ from aiogram.filters import CommandStart
 router = Router()
 
 @router.message(CommandStart())
-async def message_handler(message: Message) -> any:
+
+async def message_handler(message: Message) -> None:
     await message.answer('Starting bot.')
