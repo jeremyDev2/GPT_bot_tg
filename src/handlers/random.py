@@ -13,4 +13,4 @@ if not _RAND_IMAGE_.is_file():
 @router.message(Command("random"))
 async def random_handler(message: Message) -> None:
     photo = FSInputFile(_RAND_IMAGE_)
-    await message.answer("Generating fact...")
+    await message.answer_photo(photo=photo, caption="Generating fact...")
