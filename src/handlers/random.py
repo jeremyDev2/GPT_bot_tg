@@ -6,6 +6,7 @@ from aiogram.types import CallbackQuery, FSInputFile, Message
 
 from settings import config
 from ui import keyboard
+from services import openai
 
 router = Router()
 
@@ -22,9 +23,12 @@ if not _RANDOM_PROMPT_.is_file():
 async def random_handler(message: Message) -> None:
     photo = FSInputFile(_RAND_IMAGE_)
     prompt = _RANDOM_PROMPT_.read_text(encoding="utf-8").strip()
+    user_message = "Give me a random and interesting fact."
+    answer = await openai.generate_text(prompt, user_message)
+
     await message.answer_photo(
         photo=photo,
-        caption=prompt,
+        caption=answer,
         reply_markup=keyboard.random_keyboard(),
     )
 
@@ -33,9 +37,11 @@ async def random_handler(message: Message) -> None:
 async def random_callback(call: CallbackQuery) -> None:
     photo = FSInputFile(_RAND_IMAGE_)
     prompt = _RANDOM_PROMPT_.read_text(encoding="utf-8").strip()
+    user_message ="Give me a random and interesting fact."
+    answer = await openai.generate_text(prompt, user_message)
     await call.message.answer_photo(
         photo=photo,
-        caption=prompt,
+        caption=answer,
         reply_markup=keyboard.random_keyboard(),
     )
     await call.answer()
