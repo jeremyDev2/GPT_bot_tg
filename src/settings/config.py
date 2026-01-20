@@ -20,7 +20,7 @@ def required_env(name: str) -> str:
 
 TG_BOT_API_KEY = required_env("TELEGRAM_KEY")
 AI_API_KEY = required_env("API_KEY")
-OPENAI_MODEL = "gpt-3.5-turbo"
+OPENAI_MODEL = "GPT-5.2 Codex"
 OPENAI_MODEL_TEMPERATURE: float = 0.8
 LOGS_PATH = BASE_DIR / "logs"
 RESOURCES_DIR = BASE_DIR / "resources"
