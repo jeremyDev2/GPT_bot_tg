@@ -1,16 +1,16 @@
-from openai import OpenAI
+from openai import AsyncOpenAI
 import logging
 from settings import config
 
 logger = logging.getLogger(__name__)
 
-client = OpenAI(api_key=config.AI_API_KEY)
+client = AsyncOpenAI(api_key=config.AI_API_KEY)
 
-def generate_text(system_text: str,user_text:str) -> str:
+async def generate_text(system_text: str,user_text:str) -> str:
 
     try:
 
-        response = client.chat.completions.create(
+        response = await client.chat.completions.create(
             model = config.OPENAI_MODEL,
             messages = [
                 {"role":"system", "content": system_text},
