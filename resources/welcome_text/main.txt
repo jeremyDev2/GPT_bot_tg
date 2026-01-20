@@ -1,6 +1,6 @@
-Hello! This bot combines the convenience of <i>Telegram</i> with the power of <b>ChatGPT</b>.
+Hello! This bot combines the convenience of Telegram with the power of ChatGPT.
 
-<b>Useful commands and links:</b>
+Useful commands and links:
 
 1. /start — bot main menu
 2. /random — get a random fact · 🧠
