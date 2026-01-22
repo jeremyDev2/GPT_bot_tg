@@ -31,15 +31,18 @@ def keyboard_constructor(mapping:dict[str,str],
 
 def random_keyboard() -> InlineKeyboardMarkup:
     return keyboard_constructor(
-        {"random_fact":"More facts!", "start": "Exit"},
+        {"random":"More facts!", "start": "Exit"},
         width = 1,
     )
 
 def quiz_keyboard() -> InlineKeyboardMarkup:
     return keyboard_constructor(
-        {"quiz":"More questions!", "start":"Exit"},
-        width = 1,
-    )
+    {
+    "topic_architecture": "Architecture",
+    "topic_python": "Python",
+    "topic_databases": "Databases",
+    "start": "Exit",
+    })
 
 def gpt_talk_keyboard()-> InlineKeyboardMarkup:
     return keyboard_constructor(
@@ -49,13 +52,19 @@ def gpt_talk_keyboard()-> InlineKeyboardMarkup:
 
 def celebrity_talk_keyboard() -> InlineKeyboardMarkup:
     return keyboard_constructor(
-        {"talk_cobain":"Talk to Kurt Cobain" ,"talk_hawking":"Talk to Steven Hawking", "talk_nietzsche":"Talk to Friedrich Nietzsche", "talk_queenea":"Talk to queen", "talk_tolkien":"Talk to John Tolkien", "start": "Exit"},
+        {"talk_cobain":"Talk to Kurt Cobain" ,
+         "talk_hawking":"Talk to Steven Hawking", 
+         "talk_nietzsche":"Talk to Friedrich Nietzsche", 
+         "talk_queenea":"Talk to queen", 
+         "talk_tolkien":"Talk to John Tolkien", 
+         "start": "Exit"},
         width = 2
     )
 
 def translator_keyboard() -> InlineKeyboardMarkup:
     return keyboard_constructor(
-        {"translate_change_lang": "Change language", "start": "Exit"},
+        {"translate_change_lang": "Change language", 
+         "start": "Exit"},
         width = 1,
     )
 
