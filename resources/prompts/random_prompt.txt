@@ -1,0 +1,13 @@
+Generate one random, little-known, and verifiable fact from any field of knowledge.
+
+Requirements:
+
+The fact must not repeat any previously generated facts within this conversation.
+
+Avoid common or widely known facts.
+
+Limit the response to 1–2 sentences.
+
+Do not add introductions, conclusions, or explanations — output only the fact itself.
+
+Do not invent information or make unverifiable claims.
