@@ -38,7 +38,7 @@ def random_keyboard() -> InlineKeyboardMarkup:
 def quiz_keyboard() -> InlineKeyboardMarkup:
     return keyboard_constructor(
     {
-    "topic_architecture": "Architecture",
+    "topic_soft_architecture": "Software Architecture",
     "topic_python": "Python",
     "topic_databases": "Databases",
     "start": "Exit",
