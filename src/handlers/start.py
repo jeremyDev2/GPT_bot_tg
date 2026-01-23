@@ -21,7 +21,7 @@ if not _WELCOME_TEXT_.is_file():
 
 @router.message(CommandStart())
 async def message_handler(message: Message, state: FSMContext) -> None:
-    await state.clear() # clearing state, because it's "start" FSM 
+    await state.clear()
     photo = FSInputFile(_START_IMAGE_)
     welcome_text = _WELCOME_TEXT_.read_text(encoding="utf-8")
     await message.answer_photo(
@@ -33,7 +33,7 @@ async def message_handler(message: Message, state: FSMContext) -> None:
 
 @router.callback_query(lambda call: call.data == "start")
 async def start_callback(call: CallbackQuery, state: FSMContext) -> None:
-    await state.clear() # clearing state, because it's "start" FSM 
+    await state.clear()
     photo = FSInputFile(_START_IMAGE_)
     welcome_text = _WELCOME_TEXT_.read_text(encoding="utf-8")
     await call.message.answer_photo(
