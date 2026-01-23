@@ -8,3 +8,7 @@ class GptState(StatesGroup):
 class QuizState(StatesGroup):
     choosing_topic = State()
     waiting_answer = State()
+
+class TalkState(StatesGroup):
+    choosing_personality = State()
+    waiting_answer = State()
