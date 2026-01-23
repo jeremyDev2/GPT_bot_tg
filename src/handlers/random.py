@@ -1,6 +1,6 @@
 from pathlib import Path
 
-from aiogram import Router
+from aiogram import Router, F
 from aiogram.filters import Command
 from aiogram.types import CallbackQuery, FSInputFile, Message
 
@@ -45,3 +45,7 @@ async def random_callback(call: CallbackQuery) -> None:
         reply_markup=keyboard.random_keyboard(),
     )
     await call.answer()
+
+@router.message(F.text == "💡 Random fact")
+async def menu_random(message: Message):
+    await random_handler(message)
