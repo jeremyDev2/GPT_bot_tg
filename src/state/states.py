@@ -12,3 +12,4 @@ class QuizState(StatesGroup):
 class TalkState(StatesGroup):
     choosing_personality = State()
     waiting_answer = State()
+    user_speaks = State()
