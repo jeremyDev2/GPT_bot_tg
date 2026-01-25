@@ -7,4 +7,4 @@ Useful commands and links:
 3. /gpt — ask ChatGPT a question · 🤖
 4. /talk — chat with a famous personality · 👤
 5. /quiz — test your knowledge ❓
-6. /translator - translate any text, from any language 
+6. /translator - translate any text
