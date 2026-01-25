@@ -37,3 +37,8 @@ async def answer_message(message:Message, state:FSMContext):
     system_text = "You are a translator"
     answer = await openai.generate_text(system_text, f"Translate to {lang} : {user_text}")
     await message.answer(answer)
+
+@router.message(F.text == "🔠 Translator")
+async def menu_talk(message: Message, state: FSMContext):
+    await translator_handler(message)
+

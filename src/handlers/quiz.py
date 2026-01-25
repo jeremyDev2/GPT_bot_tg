@@ -70,5 +70,5 @@ async def quiz_answer(message: Message, state: FSMContext) -> None:
 
 @router.message(F.text == "🧠 Quiz")
 async def menu_quiz(message: Message, state:FSMContext):
-    await quiz_start(message, state)
+    await quiz_handler(message, state)
 

@@ -51,7 +51,7 @@ async def talk_message(message: Message, state: FSMContext):
     answer = await openai.generate_text(system_text, user_text)
     await message.answer(answer)
 
-
-
-
+@router.message(F.text == "📸Speak with celebrity")
+async def menu_talk(message: Message, state: FSMContext):
+    await talk_handler(message, state)
 
