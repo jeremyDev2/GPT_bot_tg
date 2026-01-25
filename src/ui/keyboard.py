@@ -63,7 +63,9 @@ def celebrity_talk_keyboard() -> InlineKeyboardMarkup:
 
 def translator_keyboard() -> InlineKeyboardMarkup:
     return keyboard_constructor(
-        {"translate_change_lang": "Change language", 
+        {"translate_to_eng": "English",
+         "translate_to_spanish":"Spanish",
+         "translate_to_chinese":"Chinese",
          "start": "Exit"},
         width = 1,
     )
