@@ -13,3 +13,7 @@ class TalkState(StatesGroup):
     choosing_personality = State()
     waiting_answer = State()
     user_speaks = State()
+
+class TranslatorState(StatesGroup):
+    user_text = State()
+    translate_text = State()
